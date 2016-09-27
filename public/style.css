@@ -1,0 +1,17 @@
+td, th {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+footer {
+  margin-top: 3em;
+}
+
+#historyChart {
+  width: 100%
+  height: auto;
+}
+
+.players {
+  margin-bottom: 15px;
+}

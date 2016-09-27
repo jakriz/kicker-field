@@ -1,0 +1,33 @@
+{
+	"//1": "describes your app and its dependencies",
+	"//2": "https://docs.npmjs.com/files/package.json",
+	"//3": "updating this file will download and update your packages",
+	"name": "kicker-field",
+	"version": "0.0.1",
+	"description": "Kicker ratings for everyone",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.12.4",
+		"mongodb": "2.2.9",
+		"body-parser": "^1.15.2",
+		"underscore": "^1.8.3"
+	},
+	"engines": {
+		"node": "4.4.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://hyperdev.com/#!/project/welcome-project"
+	},
+	"keywords": [
+		"node",
+		"hyperdev",
+		"express",
+		"kicker",
+		"rating"
+	],
+	"license": "MIT"
+}

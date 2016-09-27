@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payworks Kicker Field</title>
+    <meta name="description" content="Payworks Kicker Ratings">
+    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous" />
+          
+    <link rel="stylesheet"
+          href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Payworks Kicker Field</h1>
+      </header>
+  
+      <main>
+        <h2>Players' Ratings</h2>
+        <section class="players">
+          <table id="players">
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Rating</th>
+              <th>Matches</th>
+              <th>Won</th>
+              <th>Lost</th>
+            </tr>
+          </table>
+        </section>
+        
+        <section>
+          <a href="/history">Ratings History</a>
+        </section>
+        
+        <h2>All Matches</h2>
+        <section class="matches">
+          <table id="matches">
+            <tr>
+              <th>Team A</th>
+              <th>Team B</th>
+              <th>Score</th>
+            </tr>
+          </table>
+        </section>
+      </main>
+  
+      <footer>
+        <a href="https://payworks.com">Payworks</a> Kicker Field | <a href="https://github.com/jakriz/kicker-field">Github</a>
+      </footer>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+            
+    <script src="/client.js"></script>
+
+  </body>
+</html>
