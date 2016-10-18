@@ -4,6 +4,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongodb = require('mongodb');
 var _ = require('underscore');
+var config = require('config');
 
 var EloRater = require('./elo_rater.js');
 var EloRaterWithHistory = require('./elo_rater_with_history.js');
@@ -13,8 +14,6 @@ var app = express();
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 var uri = 'mongodb://'+process.env.MONGO_USER+':'+process.env.MONGO_PASS+'@'+process.env.MONGO_HOST+':'+process.env.MONGO_PORT+'/'+process.env.MONGO_DB;
-
-const PLAYERS = ["Abhi", "Andreea", "Christian", "David", "Dima", "Jakub", "Korbi", "Leonid", "Moritz", "Patrick", "Pedro", "Roman", "Stan", "Youssef"];
 
 app.use(express.static('public'));
 
@@ -39,7 +38,7 @@ app.post("/matches", urlencodedParser, function (request, response) {
   var teamB = _.map(textSplit[1].split(","), normalizedName);
   
   var wrongNames = _.filter(teamA.concat(teamB), function(name) {
-    return !_.contains(PLAYERS, name);
+    return !_.contains(config.get("players"), name);
   });
   
   if (wrongNames.length > 0) {
@@ -134,7 +133,6 @@ app.get("/players/history", function(request, response) {
   });
 });
 
-// listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });

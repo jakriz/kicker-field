@@ -13,18 +13,24 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
           crossorigin="anonymous" />
           
-    <link rel="stylesheet"
-          href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+          
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div class="container">
       <header>
         <h1>Payworks Kicker Field</h1>
       </header>
+      
+      <section>
+        <a href="https://payworks.com/about-us/careers/">We're hiring!</a> | <a href="https://github.com/jakriz/kicker-field">Github</a>
+      </section>
   
-      <main>
-        <h2>Players' Ratings</h2>
-        <section class="players">
+      <main class="row">
+        <section class="players col-md-6">
+          <h2>Players Ratings</h2>
           <table id="players">
             <tr>
               <th>Rank</th>
@@ -35,14 +41,12 @@
               <th>Lost</th>
             </tr>
           </table>
-        </section>
-        
-        <section>
+          
           <a href="/history">Ratings History</a>
         </section>
         
-        <h2>All Matches</h2>
-        <section class="matches">
+        <section class="matches col-md-6">
+          <h2>All Matches</h2>
           <table id="matches">
             <tr>
               <th>Team A</th>
@@ -52,10 +56,6 @@
           </table>
         </section>
       </main>
-  
-      <footer>
-        <a href="https://payworks.com">Payworks</a> Kicker Field | <a href="https://github.com/jakriz/kicker-field">Github</a>
-      </footer>
     </div>
     
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
